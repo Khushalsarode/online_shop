@@ -20,10 +20,10 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t khushalsarode/online_Store:latest .
-          docker tag khushalsarode/online_Store:latest khushalsarode/online_Store:${{ github.sha }}
+          docker build -t khushalsarode/online_store:latest .
+          docker tag khushalsarode/online_store:latest khushalsarode/online_store:${{ github.sha }}
 
       - name: Push Docker image to Docker Hub
         run: |
-          docker push khushalsarode/online_Store:latest
-          docker push khushalsarode/online_Store:${{ github.sha }}
+          docker push khushalsarode/online_store:latest
+          docker push khushalsarode/online_store:${{ github.sha }}
